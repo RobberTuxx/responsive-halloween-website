@@ -13,17 +13,17 @@
   --text-color: hsl(var(--hue), 4%, 85%);
   --text-color-light: hsl(var(--hue), 4%, 55%);
 
-  /*Green gradient*/
+  /*Green gradient
   --body-color: linear-gradient(90deg, hsl(104, 28%, 40%) 0%, hsl(58, 28%, 40%) 100%);
-  --container-color: linear-gradient(136deg, hsl(104, 28%, 35%) 0%, hsl(58, 28%, 35%) 100%);
-  
-  /*Red gradient*/
-  /* --body-color: linear-gradient(90deg, hsl(360, 28%, 40%) 0%, hsl(18, 28%, 40%) 100%);
-  --container-color: linear-gradient(136deg, hsl(360, 28%, 35%) 0%, hsl(18, 28%, 35%) 100%); */
+  --container-color: linear-gradient(136deg, hsl(104, 28%, 35%) 0%, hsl(58, 28%, 35%) 100%);*/
 
-  /*Black solid*/
-  /* --body-color: hsl(30, 8%, 8%);
-  --container-color: hsl(30, 8%, 10%); */
+  /*Red gradient*/
+   --body-color: linear-gradient(90deg, hsl(360, 28%, 40%) 0%, hsl(18, 28%, 40%) 100%);
+  --container-color: linear-gradient(136deg, hsl(360, 28%, 35%) 0%, hsl(18, 28%, 35%) 100%);
+
+  /*Black solid
+   --body-color: hsl(30, 8%, 8%);
+  --container-color: hsl(30, 8%, 10%);*/
 
   /*========== Font and typography ==========*/
   --body-font: 'Poppins', sans-serif;
@@ -145,7 +145,7 @@ button{
 /*=============== HEADER ===============*/
 .header{
   width: 100%;
-  background: var(--body-color); 
+  background: var(--body-color);
   position: fixed;
   top: 0;
   left: 0;
@@ -340,7 +340,7 @@ button{
 
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
   margin: 0 .5rem;
-} 
+}
 
 .swiper-pagination-bullet-active{
   width: 1.5rem;
@@ -1010,5 +1010,5 @@ button{
 @keyframes floating {
   0% { transform: translate(0,  0px); }
   50%  { transform: translate(0, 15px); }
-  100%   { transform: translate(0, -0px); }   
+  100%   { transform: translate(0, -0px); }
 }
