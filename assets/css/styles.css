@@ -971,7 +971,7 @@ button{
   }
 
   .category__container{
-    column-gap: 8rem;
+    column-gap: 4rem;
   }
   .category__img{
     width: 200px;
