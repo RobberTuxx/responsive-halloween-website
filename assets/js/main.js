@@ -56,7 +56,7 @@ let newSwiper = new Swiper(".new-swiper", {
     spaceBetween: 16,
 });
 
-/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+/*=============== SCROLL SECTIONS ACTIVE LINK ===============
 const sections = document.querySelectorAll('section[id]')
 
 function scrollActive(){
@@ -75,7 +75,7 @@ function scrollActive(){
     })
 }
 window.addEventListener('scroll', scrollActive)
-
+*/
 /*=============== SHOW SCROLL UP ===============*/
 function scrollUp(){
     const scrollUp = document.getElementById('scroll-up');
