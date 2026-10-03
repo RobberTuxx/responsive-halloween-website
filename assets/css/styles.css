@@ -423,6 +423,7 @@ button{
 
 .category__img{
   width: 120px;
+  height: 120px;
   margin-bottom: var(--mb-0-75);
   transition: .3s;
 }
@@ -975,6 +976,7 @@ button{
   }
   .category__img{
     width: 200px;
+    height: 200px;
   }
 
   .about__container{
