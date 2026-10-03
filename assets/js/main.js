@@ -33,7 +33,7 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 let homeSwiper = new Swiper(".home-swiper", {
     spaceBetween: 30,
     loop: 'true',
-    
+
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -76,7 +76,7 @@ function scrollActive(){
 }
 window.addEventListener('scroll', scrollActive)
 
-/*=============== SHOW SCROLL UP ===============*/ 
+/*=============== SHOW SCROLL UP ===============*/
 function scrollUp(){
     const scrollUp = document.getElementById('scroll-up');
     // When the scroll is higher than 460 viewport height, add the show-scroll class to the a tag with the scroll-top class
@@ -92,6 +92,34 @@ const sr = ScrollReveal({
     delay: 400,
     // reset: true
 })
+
+// Cambia esta fecha por la de tu fiesta
+const fechaFiesta = new Date("2026-10-17T20:00:00").getTime();
+
+const actualizarContador = () => {
+    const ahora = new Date().getTime();
+    const diferencia = fechaFiesta - ahora;
+
+    // Si ya pasó la fecha
+    if (diferencia < 0) {
+        document.querySelector('.contador').innerHTML = "<h2>¡La fiesta ya comenzó! 🎃</h2>";
+        return;
+    }
+
+    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+    document.getElementById("dias").textContent = String(dias).padStart(2, "0");
+    document.getElementById("horas").textContent = String(horas).padStart(2, "0");
+    document.getElementById("minutos").textContent = String(minutos).padStart(2, "0");
+    document.getElementById("segundos").textContent = String(segundos).padStart(2, "0");
+};
+
+// Actualiza cada segundo
+setInterval(actualizarContador, 1000);
+actualizarContador();
 
 sr.reveal(`.home-swiper, .new-swiper, .newsletter__container`)
 sr.reveal(`.category__data, .trick__content, .footer__content`,{interval: 100})
